@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import "tailwindcss";
+
+/* Fuente personalizada Inconsolata */
+@font-face {
+  font-family: 'Inconsolata';
+  src: url('/fonts/Inconsolata-VariableFont_wdth,wght.woff2') format('woff2');
+  font-weight: 100 900; /* Rango de pesos si la fuente es variable */
+  font-display: swap;
+}
+
+/* Estilo base para el cuerpo */
+@layer base {
+  body {
+    font-family: 'Inconsolata', sans-serif; /* Asigna la fuente personalizada a todo el cuerpo */
+  }
+}
+
+/* Establece la clase 'text-principal' para que se use el color personalizado */
+.text-principal {
+  color: #f67464;
+}
