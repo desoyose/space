@@ -1,8 +1,10 @@
 module.exports = {
   content: [
-    "./index.html",            // Incluye el archivo index.html
-    "./pages/**/*.html",       // Incluye todos los archivos .html dentro de la carpeta pages (fuera de src)
-    "./src/**/*.{js,ts,jsx,tsx}",  // Incluye todos los archivos JS/TS en src
+    "./index.html",
+    "./crew.html", 
+    "./destination.html",  
+    "./technology.html",       
+    "./src/**/*.{js,ts,jsx,tsx}",   // Incluye todos los archivos JS/TS en src
   ],
   theme: {
     extend: {

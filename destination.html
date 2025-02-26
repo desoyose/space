@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="../src/style.css" rel="stylesheet">
+  <link href="./src/style.css" rel="stylesheet">
 
   <title>Mi Proyecto</title>
 </head>
@@ -13,24 +13,24 @@
   <div class="layout__header mx-auto max-w-[1440px] fixed top-0 bottom-0 left-0 right-0 z-0">
     <picture>
       <!-- Imagen para pantallas pequeñas (móviles o tabletas) -->
-      <source media="(max-width: 760px)" srcset="../assets/destination/background-destination-mobile.jpg">
+      <source media="(max-width: 760px)" srcset="./assets/destination/background-destination-mobile.jpg">
     
       <!-- Imagen para pantallas grandes (por ejemplo, escritorio) -->
-      <source media="(min-width: 1024px)" srcset="../assets/destination/background-destination-desktop.jpg">
+      <source media="(min-width: 1024px)" srcset="./assets/destination/background-destination-desktop.jpg">
     
       <!-- Imagen para pantallas intermedias (tabletas) -->
-      <source media="(min-width: 761px)" srcset="../assets/destination/background-destination-tablet.jpg">
+      <source media="(min-width: 761px)" srcset="./assets/destination/background-destination-tablet.jpg">
     
       <!-- Imagen de respaldo -->
-      <img class="w-full h-screen object-cover" src="../assets/destination/background-destination-desktop.jpg" alt="Imagen de fondo">
+      <img class="w-full h-screen object-cover" src="./assets/destination/background-destination-desktop.jpg" alt="Imagen de fondo">
     </picture>
     
 
   </div>
   <header class="header__box relative  w-full max-w-[1440px] mx-auto z-40">
-    <div class="absolute top-6 left-6 z-50 w-12 h-12 lg:top-10"><img class="object-cover w-full" src="../assets/shared/logo.svg" alt=""></div>
-    <div id="hamburger__menu"  class="absolute top-8 cursor-pointer right-8 z-50 md:hidden"><img class="" src="../assets/shared/icon-hamburger.svg" alt=""></div>
-    <div id="close__menu"  class="absolute top-8 cursor-pointer right-8 z-50 hidden md:hidden"><img src="../assets/shared/icon-close.svg" alt=""></div>
+    <div class="absolute top-6 left-6 z-50 w-12 h-12 lg:top-10"><img class="object-cover w-full" src="./assets/shared/logo.svg" alt=""></div>
+    <div id="hamburger__menu"  class="absolute top-8 cursor-pointer right-8 z-50 md:hidden"><img class="" src="./assets/shared/icon-hamburger.svg" alt=""></div>
+    <div id="close__menu"  class="absolute top-8 cursor-pointer right-8 z-50 hidden md:hidden"><img src="./assets/shared/icon-close.svg" alt=""></div>
     <hr class="border-0 lg:border border-white w-[34%] absolute top-16 left-24 z-50">
     <div class="layout__nav text-white absolute top-0 right-0 transition-all md:transition-none ease-linear duration-300  translate-x-52  md:translate-x-0 w-[0%] h-screen  bg-gradient-to-r
      from-white/15 to-Blue-sky/5  backdrop-blur-3xl p-12 pt-32 pr-0
@@ -40,7 +40,7 @@
       <nav class="nav__header w-full flex justify-end pr-8">
         <ul class="ul__header flex gap-8 flex-col md:flex-row w-full md:gap-12 md:justify-end ">
           <li class="item__nav cursor-pointer text-xl font-barlowCondensed uppercase w-full border-r-2 border-white font-light
-          md:border-r-0 md:w-auto relative after:content-[''] after:absolute after:bottom-[-2rem] lg:after:bottom-[-1rem] after:left-0 after:w-full after:h-[2px] after:bg-transparent md:after:bg-white md:after:scale-x-0 md:hover:after:scale-x-100 md:after:transition-transform md:after:duration-300"><a href="../index.html"><span
+          md:border-r-0 md:w-auto relative after:content-[''] after:absolute after:bottom-[-2rem] lg:after:bottom-[-1rem] after:left-0 after:w-full after:h-[2px] after:bg-transparent md:after:bg-white md:after:scale-x-0 md:hover:after:scale-x-100 md:after:transition-transform md:after:duration-300"><a href="./index.html"><span
                 class=" font-medium  mr-4">00</span>Home</a></li>
           <li class="item__nav cursor-pointer text-xl font-barlowCondensed uppercase w-full font-light  
           md:w-auto relative after:content-[''] after:absolute after:bottom-[-2rem] lg:after:bottom-[-1rem] after:left-0 after:w-full after:h-[2px] after:bg-transparent md:after:bg-white md:after:scale-x-1 md:hover:after:scale-x-100 md:after:transition-transform md:after:duration-300"><a href="#"><span
@@ -64,7 +64,7 @@
       <section class="flex flex-col main__section ">
         <div class="dest__img transition-all  ease-in-out  opacity-100 translate-y-0 flex items-center justify-center w-[50%] align-middle self-center mb-8 md:w-60 md:h-60 xl:mt-28 xl:w-[80%] xl:h-auto">
           <img class="planet__img object-cover w-full " 
-          src="../assets/destination/image-moon.webp" 
+          src="./assets/destination/image-moon.webp" 
           alt="Imagen del planeta">
              </div>
       </div>
@@ -101,7 +101,7 @@
     </div>
     </div>
   </main>
-  <script type="module" src="../src/main.js"></script>
+  <script type="module" src="./src/main.js"></script>
 </body>
 
 </html>

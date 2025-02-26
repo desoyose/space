@@ -4,12 +4,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="../src/style.css" rel="stylesheet">
+  <link href="./src/style.css" rel="stylesheet">
 
   <title>Mi Proyecto</title>
 </head>
 
-<body class="h-full relative bg-Blue_Dark w-full max-w-[1440px] mx-auto  ">
+<body class="h-full relative bg-Blue_Dark w-full max-w-[1440px] mx-auto overflow-y-auto ">
   <div class="layout__header mx-auto max-w-[1440px] fixed top-0 bottom-0 left-0 right-0 z-0">
     <picture>
       <!-- Imagen para pantallas grandes (por ejemplo, escritorio) -->
@@ -19,18 +19,18 @@
       <source media="(max-width: 760px)" srcset="../assets/crew/background-crew-mobile.jpg">
 
       <!-- Imagen de respaldo (por si no se cumplen los breakpoints o no es compatible con <picture>) -->
-      <img class="w-full h-screen object-cover" src="../assets/crew/background-crew-desktop.jpg" alt="Imagen de fondo">
+      <img class="w-full h-screen object-cover" src="./assets/crew/background-crew-desktop.jpg" alt="Imagen de fondo">
     </picture>
 
   </div>
   <header class="header__box relative  w-full max-w-[1440px] mx-auto z-40">
     <div class="absolute top-6 left-6 z-50 w-12 h-12 lg:top-10"><img class="object-cover w-full"
-        src="../assets/shared/logo.svg" alt=""></div>
+        src="./assets/shared/logo.svg" alt=""></div>
     <div id="hamburger__menu" class="absolute top-8 cursor-pointer right-8 z-50 md:hidden"><img class=""
-        src="../assets/shared/icon-hamburger.svg" alt=""></div>
+        src="./assets/shared/icon-hamburger.svg" alt=""></div>
 
     <div id="close__menu" class="absolute top-8 cursor-pointer right-8 z-50 hidden md:hidden"><img
-        src="../assets/shared/icon-close.svg" alt=""></div>
+        src="./assets/shared/icon-close.svg" alt=""></div>
     <hr class="border-0 lg:border border-white w-[34%] absolute top-16 left-24 z-50">
     <div class="layout__nav text-white absolute top-0 right-0 transition-all md:transition-none ease-linear duration-300  translate-x-52  md:translate-x-0 w-[0%] h-screen  bg-gradient-to-r
      from-white/15 to-Blue-sky/5  backdrop-blur-3xl p-12 pt-32 pr-0
@@ -42,7 +42,7 @@
           <li
             class="item__nav cursor-pointer text-xl font-barlowCondensed uppercase w-full border-r-2 border-white font-light
           md:border-r-0 md:w-auto relative after:content-[''] after:absolute after:bottom-[-2rem] lg:after:bottom-[-1rem] after:left-0 after:w-full after:h-[2px] after:bg-transparent md:after:bg-white md:after:scale-x-0 md:hover:after:scale-x-100 md:after:transition-transform md:after:duration-300">
-            <a href="../index.html"><span class=" font-medium  mr-4">00</span>Home</a>
+            <a href="./index.html"><span class=" font-medium  mr-4">00</span>Home</a>
           </li>
           <li
             class="item__nav cursor-pointer text-xl font-barlowCondensed uppercase w-full font-light  
@@ -72,7 +72,7 @@
           CREW</h1>
       </div>
       <section
-        class="crew__secton flex flex-col xl:flex-row xl:w-full gap-8 xl:justify-center  xl:items-center transition-all  ease-in-out  opacity-100  translate-y-0 xl:absolute xl:bottom-0">
+        class="crew__secton flex flex-col xl:flex-row xl:w-full gap-8 xl:justify-center xl:max-h-[500px] relative  transition-all  ease-in-out  opacity-100  translate-y-0   lg:pt-20">
 
         <div class="box__left flex-col flex">
           <div class="flex flex-col xl:justify-start items-center align-middle  xl:align-top xl:items-start">
@@ -90,7 +90,7 @@
                 commander of Crew Dragon Demo-2.pective an and Apollo 11 landing sites.</p>
             </div>
           </div>
-          <div class="flex w-full justify-center mt-12 mb-2 z-30">
+          <div class="flex w-full justify-center mt-12 mb-2 z-50">
             <div class="flex flex-row gap-8 z-30">
               <div class="crew__dot cursor-pointer w-4 h-4 rounded-full bg-white"></div>
               <div class="crew__dot cursor-pointer w-4 h-4 rounded-full bg-white/50"></div>
@@ -99,11 +99,12 @@
             </div>
           </div>
         </div>
-        <div class="box__right flex flex-col ">
+        <div class="box__right relative flex flex-col ">
           <div class="box__img__crew pt-4 w-full flex mt-4 relative justify-center items-center xl:w-[500px] ">
-            <img class="crew__img object-cover w-[90%] mx-auto md:w-[80%] xl:w-[100%]"
-              src="../assets/crew/image-douglas-hurley.webp" alt="">
+            <img class="crew__img object-cover w-[60%] mx-auto md:w-[80%] "
+              src="./assets/crew/image-douglas-hurley.webp" alt="">
           </div>
+          
         </div>
 
 
@@ -112,10 +113,10 @@
     </div>
   </main>
   <div class="absolute inset-x-0 bottom-0 w-full min-h-[40vh] bg-gradient-to-t 
-  from-Blue_Dark from-[17%] via-[#f2b95d00] via-[49%] to-transparent xl:hidden">
+  from-Blue_Dark from-[17%] via-[#f2b95d00] via-[49%]  to-transparent xl:hidden">
   </div>
 
-  <script type="module" src="../src/main.js" defer></script>
+  <script type="module" src="./src/main.js" defer></script>
 </body>
 
 </html>
