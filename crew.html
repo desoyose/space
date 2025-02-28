@@ -9,61 +9,43 @@
   <title>Mi Proyecto</title>
 </head>
 
-<body class="h-full relative bg-Blue_Dark w-full max-w-[1440px] mx-auto overflow-y-auto ">
-  <div class="layout__header mx-auto max-w-[1440px] fixed top-0 bottom-0 left-0 right-0 z-0">
-    <picture>
-      <!-- Imagen para pantallas grandes (por ejemplo, escritorio) -->
-      <source media="(min-width: 761px)" srcset="../assets/crew/background-crew-desktop.jpg">
-
-      <!-- Imagen para pantallas más pequeñas (móviles o tabletas) -->
-      <source media="(max-width: 760px)" srcset="../assets/crew/background-crew-mobile.jpg">
-
-      <!-- Imagen de respaldo (por si no se cumplen los breakpoints o no es compatible con <picture>) -->
-      <img class="w-full h-screen object-cover" src="./assets/crew/background-crew-desktop.jpg" alt="Imagen de fondo">
-    </picture>
-
-  </div>
-  <header class="header__box relative  w-full max-w-[1440px] mx-auto z-40">
+<body class="   w-full lg:max-w-[1440px] mx-auto overflow-y-auto bg-[#0b0e17]">
+  <header class="header__box relative   lg:max-w-[1440px] mx-auto z-40 ">
     <div class="absolute top-6 left-6 z-50 w-12 h-12 lg:top-10"><img class="object-cover w-full"
         src="./assets/shared/logo.svg" alt=""></div>
-    <div id="hamburger__menu" class="absolute top-8 cursor-pointer right-8 z-50 md:hidden"><img class=""
+    <div id="hamburger__menu" class="absolute top-8 right-8 cursor-pointer z-50 md:hidden"><img class=""
         src="./assets/shared/icon-hamburger.svg" alt=""></div>
-
-    <div id="close__menu" class="absolute top-8 cursor-pointer right-8 z-50 hidden md:hidden"><img
+    <div id="close__menu" class="absolute   top-8 right-8 z-50 hidden cursor-pointer  md:hidden"><img
         src="./assets/shared/icon-close.svg" alt=""></div>
-    <hr class="border-0 lg:border border-white w-[34%] absolute top-16 left-24 z-50">
-    <div class="layout__nav text-white absolute top-0 right-0 transition-all md:transition-none ease-linear duration-300  translate-x-52  md:translate-x-0 w-[0%] h-screen  bg-gradient-to-r
-     from-white/15 to-Blue-sky/5  backdrop-blur-3xl p-12 pt-32 pr-0
-     md:h-24 md:p-0 md:w-[86%] md:flex md:items-center lg:w-[60%] lg:h-16 lg:mt-8 lg:border border-Blue_Dark
-     ">
+    <hr class="absolute top-16 left-[10%] sm:w-0 md:w-0 lg:w-[32%]  h-[0.5px] bg-white z-40 border-none">
 
-      <nav class="nav__header w-full flex justify-end pr-8">
-        <ul class="ul__header flex gap-8 flex-col md:flex-row w-full md:gap-12 md:justify-end ">
-          <li
-            class="item__nav cursor-pointer text-xl font-barlowCondensed uppercase w-full border-r-2 border-white font-light
-          md:border-r-0 md:w-auto relative after:content-[''] after:absolute after:bottom-[-2rem] lg:after:bottom-[-1rem] after:left-0 after:w-full after:h-[2px] after:bg-transparent md:after:bg-white md:after:scale-x-0 md:hover:after:scale-x-100 md:after:transition-transform md:after:duration-300">
-            <a href="./index.html"><span class=" font-medium  mr-4">00</span>Home</a>
-          </li>
-          <li
-            class="item__nav cursor-pointer text-xl font-barlowCondensed uppercase w-full font-light  
-          md:w-auto relative after:content-[''] after:absolute after:bottom-[-2rem] lg:after:bottom-[-1rem] after:left-0 after:w-full after:h-[2px] after:bg-transparent md:after:bg-white md:after:scale-x-0 md:hover:after:scale-x-100 md:after:transition-transform md:after:duration-300">
-            <a href="./destination.html"><span class=" font-medium  mr-4">01</span>Destination</a>
-          </li>
-          <li
-            class="item__nav cursor-pointer text-xl font-barlowCondensed uppercase w-full font-light  
-          md:w-auto relative after:content-[''] after:absolute after:bottom-[-2rem] lg:after:bottom-[-1rem] after:left-0 after:w-full after:h-[2px] after:bg-transparent md:after:bg-white md:after:scale-x-1 md:hover:after:scale-x-100 md:after:transition-transform md:after:duration-300">
-            <a href="#"><span class=" font-medium  cursor-pointer mr-4">02</span>Crew</a>
-          </li>
+    <div class="layout__nav text-white flex absolute w-[0%]  top-0 right-0 transition-all md:transition-none ease-linear duration-300   h-screen  bg-gradient-to-r
+     from-white/15 to-Blue-sky/5   md:translate-x-0 backdrop-blur-3xl p-12 pt-32 px-0
+     md:h-24 md:p-0 md:w-[86%] md:flex md:items-center lg:w-[60%] lg:h-16 lg:mt-8 lg:border border-Blue_Dark
+     overflow-hidden">
+      <nav class="nav__header pl-5   lg:w-full flex justify-end pr-8">
+        <ul class="ul__header flex gap-8 flex-col md:flex-row  md:gap-12 md:justify-end ">
           <li
             class="item__nav cursor-pointer text-xl font-barlowCondensed uppercase w-full font-light 
           md:w-auto relative after:content-[''] after:absolute after:bottom-[-2rem] lg:after:bottom-[-1rem] after:left-0 after:w-full after:h-[2px] after:bg-transparent md:after:bg-white md:after:scale-x-0 md:hover:after:scale-x-100 md:after:transition-transform md:after:duration-300">
-            <a href="./technology.html"><span class=" font-medium mr-4">03</span>Technology</a>
-          </li>
+            <a href="./index.html"><span class=" font-medium  mr-4">00</span>Home</a></li>
+          <li
+            class="item__nav cursor-pointer text-xl font-barlowCondensed uppercase w-full font-light  
+          md:w-auto relative after:content-[''] after:absolute after:bottom-[-2rem] lg:after:bottom-[-1rem] after:left-0 after:w-full after:h-[2px] after:bg-transparent md:after:bg-white md:after:scale-x-0 md:hover:after:scale-x-100 md:after:transition-transform md:after:duration-300">
+            <a href="./destination.html"><span class=" font-medium  mr-4">01</span>Destination</a></li>
+          <li
+            class="item__nav cursor-pointer text-xl font-barlowCondensed uppercase w-full border-r-2 border-white font-light
+          md:border-r-0 md:w-auto relative after:content-[''] after:absolute after:bottom-[-2rem] lg:after:bottom-[-1rem] after:left-0 after:w-full after:h-[2px] after:bg-transparent md:after:bg-white md:after:scale-x-1 md:hover:after:scale-x-100 md:after:transition-transform md:after:duration-300">
+            <a href="./crew.html"><span class=" font-medium  cursor-pointer mr-4">02</span>Crew</a></li>
+          <li
+            class="item__nav cursor-pointer text-xl font-barlowCondensed uppercase w-full font-light 
+          md:w-auto relative after:content-[''] after:absolute after:bottom-[-2rem] lg:after:bottom-[-1rem] after:left-0 after:w-full after:h-[2px] after:bg-transparent md:after:bg-white md:after:scale-x-0 md:hover:after:scale-x-100 md:after:transition-transform md:after:duration-300">
+            <a href="./technology.html"><span class=" font-medium mr-4">03</span>Technology</a></li>
         </ul>
       </nav>
     </div>
   </header>
-  <main
+  <!-- <main
     class="main__box relative  w-full max-w-[1440px] h-auto mx-auto flex justify-center align-middle md:w-[600px]  md:px-6 text-white pb-8 xl:pb-12 xl:w-full  xl:px-24 xl:h-screen xl:items-start xl:overflow-hidden">
     <div class="layout__main flex flex-col md:w-full md:justify-center md:items-center xl:w-full">
       <div
@@ -102,7 +84,7 @@
         <div class="box__right relative flex flex-col ">
           <div class="box__img__crew pt-4 w-full flex mt-4 relative justify-center items-center xl:w-[500px] ">
             <img class="crew__img object-cover w-[60%] mx-auto md:w-[80%] "
-              src="./assets/crew/image-douglas-hurley.webp" alt="">
+              src="./public/assets/crew/image-douglas-hurley.webp" alt="">
           </div>
           
         </div>
@@ -111,10 +93,61 @@
       </section>
 
     </div>
-  </main>
-  <div class="absolute inset-x-0 bottom-0 w-full min-h-[40vh] bg-gradient-to-t 
+  </main> -->
+  <!-- <div class="absolute inset-x-0 bottom-0 w-full min-h-[40vh] bg-gradient-to-t 
   from-Blue_Dark from-[17%] via-[#f2b95d00] via-[49%]  to-transparent xl:hidden">
-  </div>
+  </div> -->
+  <main
+    class="lg:max-w-[1440px] px-8   bg-[url(/public/assets/crew/background-crew-mobile.jpg)] bg-cover md:bg-[url(/public/assets/crew/background-crew-tablet.jpg)] lg:bg-[url(/public/assets/crew/background-crew-desktop.jpg)]">
+    <div class="background   md:max-w-full lg:max-w-[1440px]  flex flex-col items-center">
+      <div class="text-white  mb-8 mt-28 flex flex-row align-middle w-full md:mt-32 md:mb-6 lg:mb-10 lg:pl-24">
+        <h2 class="text-white text-center md:text-start"><span class="font-thin mr-4">02</span>MEET YOUR CREW</h2>
+      </div>
+      <section class="layout__main max-w-[512px] lg:w-full lg:max-w-[1100px] text-white flex flex-col self-center lg:h-700px">
+        
+        <article class="crew__secton flex w-full h-auto flex-col md:max-w-[512px] lg:max-w-full opacity-100 translate-y-10 justify-center lg:h-full lg:flex-row gap-16 md:gap-2 lg:items-center">
+          <div class="box__left text-center flex flex-col w-full h-auto lg:justify-between">
+            <div class="info__box flex flex-col justify-center lg:justify-start lg:text-start">
+              <span class="crew__role text-2xl opacity-50 font-bellafair uppercase lg:text-start">Commander</span>
+              <h1 class="name__person text-center text-4xl font-bellafair uppercase pt-4 pb-6 lg:text-start">Douglas Hurley</h1>
+              <p class="crew__text text-center text-base/8 font-thin text-pretty xl:w-[500px] lg:text-start">Douglas
+                Gerald Hurley is an American engineer, former Marine Corps pilot and former NASA astronaut. He launched
+                into space for the third time as commander of Crew Dragon Demo-2.
+              </p>
+            </div>
+            <div class="flex w-full justify-center mt-12 mb-2 z-50 lg:justify-start lg:align-bottom lg:pt-32">
+              <div class="flex flex-row gap-8 z-30">
+                <div class="crew__dot cursor-pointer w-3 h-3 rounded-full bg-white"></div>
+                <div class="crew__dot cursor-pointer w-3 h-3 rounded-full bg-white/50"></div>
+                <div class="crew__dot cursor-pointer w-3 h-3 rounded-full bg-white/50"></div>
+                <div class="crew__dot cursor-pointer w-3 h-3 rounded-full bg-white/50"></div>
+              </div>
+            </div>
+          </div>
+          <div class="box__right relative h-auto  w-full  flex justify-center mt-10  lg:items-start lg:mt-0 ">
+            <div class="crew__img w-[80%] md:bg-bottom md:w-full h-[500px] lg:w-full lg:h-[700px] bg-[url(/public/assets/crew/image-douglas-hurley.webp)]  bg-contain bg-no-repeat">
+              <!-- <img class="crew__img object-cover " src="./public/assets/crew/image-douglas-hurley.webp" alt=""> -->
+            </div>
+            <div class="absolute md:opacity-0 lg:opacity-100 inset-x-0 bottom-0 w-full min-h-[40vh] bg-gradient-to-t  from-[#0b0e17] from-[17%] via-[#f2b95d00] via-[49%]  to-transparent ">
+            </div>
+          </div>
+        </article>
+      </section>
+
+    </div>
+
+    <!-- <div class="layout__header mx-auto max-w-[1440px] absolute top-0 bottom-0 left-0 right-0 z-10">
+      <picture>
+        <source media="(min-width: 761px)" srcset="./assets/crew/background-crew-desktop.jpg">
+  
+        <source media="(max-width: 760px)" srcset="./assets/crew/background-crew-mobile.jpg">
+  
+        <img class="w-full h-screen object-cover" src="./assets/crew/background-crew-desktop.jpg" alt="Imagen de fondo">
+      </picture>
+  
+    </div> -->
+
+  </main>
 
   <script type="module" src="./src/main.js" defer></script>
 </body>

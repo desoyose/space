@@ -27,23 +27,23 @@
     
 
   </div>
-  <header class="header__box relative  w-full max-w-[1440px] mx-auto z-40">
-    <div class="absolute top-6 left-6 z-50 w-12 h-12 lg:top-10"><img class="object-cover w-full" src="./assets/shared/logo.svg" alt=""></div>
-    <div id="hamburger__menu"  class="absolute top-8 cursor-pointer right-8 z-50 md:hidden"><img class="" src="./assets/shared/icon-hamburger.svg" alt=""></div>
-    <div id="close__menu"  class="absolute top-8 cursor-pointer right-8 z-50 hidden md:hidden"><img src="./assets/shared/icon-close.svg" alt=""></div>
-    <hr class="border-0 lg:border border-white w-[34%] absolute top-16 left-24 z-50">
-    <div class="layout__nav text-white absolute top-0 right-0 transition-all md:transition-none ease-linear duration-300  translate-x-52  md:translate-x-0 w-[0%] h-screen  bg-gradient-to-r
-     from-white/15 to-Blue-sky/5  backdrop-blur-3xl p-12 pt-32 pr-0
+  <header class="header__box relative   lg:max-w-[1440px] mx-auto z-40 ">
+    <div  class="absolute top-6 left-6 z-50 w-12 h-12 lg:top-10"><img class="object-cover w-full" src="./assets/shared/logo.svg" alt=""></div>
+    <div id="hamburger__menu" class="absolute top-8 right-8 cursor-pointer z-50 md:hidden"><img class="" src="./assets/shared/icon-hamburger.svg" alt=""></div>
+    <div id="close__menu" class="absolute   top-8 right-8 z-50 hidden cursor-pointer  md:hidden"><img src="./assets/shared/icon-close.svg" alt=""></div>
+    <hr class="absolute top-16 left-[10%] sm:w-0 md:w-0 lg:w-[32%]  h-[0.5px] bg-white z-40 border-none">
+     
+    <div class="layout__nav text-white flex absolute w-[0%]  top-0 right-0 transition-all md:transition-none ease-linear duration-300   h-screen  bg-gradient-to-r
+     from-white/15 to-Blue-sky/5   md:translate-x-0 backdrop-blur-3xl p-12 pt-32 px-0
      md:h-24 md:p-0 md:w-[86%] md:flex md:items-center lg:w-[60%] lg:h-16 lg:mt-8 lg:border border-Blue_Dark
-     ">
-      
-      <nav class="nav__header w-full flex justify-end pr-8">
-        <ul class="ul__header flex gap-8 flex-col md:flex-row w-full md:gap-12 md:justify-end ">
+     overflow-hidden">
+      <nav class="nav__header pl-5   lg:w-full flex justify-end pr-8">
+        <ul class="ul__header flex gap-8 flex-col md:flex-row  md:gap-12 md:justify-end ">
           <li class="item__nav cursor-pointer text-xl font-barlowCondensed uppercase w-full border-r-2 border-white font-light
-          md:border-r-0 md:w-auto relative after:content-[''] after:absolute after:bottom-[-2rem] lg:after:bottom-[-1rem] after:left-0 after:w-full after:h-[2px] after:bg-transparent md:after:bg-white md:after:scale-x-0 md:hover:after:scale-x-100 md:after:transition-transform md:after:duration-300"><a href="./index.html"><span
+          md:border-r-0 md:w-auto relative after:content-[''] after:absolute after:bottom-[-2rem] lg:after:bottom-[-1rem] after:left-0 after:w-full after:h-[2px] after:bg-transparent md:after:bg-white md:after:scale-x-1 md:hover:after:scale-x-100 md:after:transition-transform md:after:duration-300"><a href="./index.html"><span
                 class=" font-medium  mr-4">00</span>Home</a></li>
           <li class="item__nav cursor-pointer text-xl font-barlowCondensed uppercase w-full font-light  
-          md:w-auto relative after:content-[''] after:absolute after:bottom-[-2rem] lg:after:bottom-[-1rem] after:left-0 after:w-full after:h-[2px] after:bg-transparent md:after:bg-white md:after:scale-x-1 md:hover:after:scale-x-100 md:after:transition-transform md:after:duration-300"><a href="#"><span
+          md:w-auto relative after:content-[''] after:absolute after:bottom-[-2rem] lg:after:bottom-[-1rem] after:left-0 after:w-full after:h-[2px] after:bg-transparent md:after:bg-white md:after:scale-x-0 md:hover:after:scale-x-100 md:after:transition-transform md:after:duration-300"><a href="./destination.html"><span
                 class=" font-medium  mr-4">01</span>Destination</a></li>
           <li class="item__nav cursor-pointer text-xl font-barlowCondensed uppercase w-full font-light  
           md:w-auto relative after:content-[''] after:absolute after:bottom-[-2rem] lg:after:bottom-[-1rem] after:left-0 after:w-full after:h-[2px] after:bg-transparent md:after:bg-white md:after:scale-x-0 md:hover:after:scale-x-100 md:after:transition-transform md:after:duration-300"><a href="./crew.html"><span
@@ -55,26 +55,26 @@
       </nav>
     </div>
   </header>
-  <main class="main__box relative  w-full max-w-[1440px] h-auto mx-auto flex justify-center align-middle  px-6 text-white mb-8 xl:flex-row ">
+  <main class="main__box relative overflow-hidden  w-full max-w-[1440px] h-auto mx-auto flex justify-center align-middle  px-6 text-white mb-8 xl:flex-row xl:max-w-[1110px]">
     <div class="layout__main flex flex-col  md:items-start md:w-[600px] xl:flex-row xl:mt-14 xl:justify-center xl:align-middle  xl:w-full md:px-6 xl:gap-24">
       <div class="box__left flex flex-col justify-center  w-full  ">
       <div class="main__title flex items-center justify-center md:justify-start mb-8 mt-28 ">
         <h1 class="text-white text-center md:text-start"><span class="font-thin mr-4">01</span>PICK YOUR DESTINATION</h1>
       </div>
-      <section class="flex flex-col main__section ">
-        <div class="dest__img transition-all  ease-in-out  opacity-100 translate-y-0 flex items-center justify-center w-[50%] align-middle self-center mb-8 md:w-60 md:h-60 xl:mt-28 xl:w-[80%] xl:h-auto">
+      <section class="flex flex-col main__section xl:max-w-[1110px]">
+        <div class="dest__img transition-all  ease-in-out  opacity-100 translate-y-0 flex items-center justify-center w-[50%] align-middle self-center mb-8 md:w-60 md:h-60 xl:mt-28 xl:w-[540px] xl:h-auto">
           <img class="planet__img object-cover w-full " 
-          src="./assets/destination/image-moon.webp" 
+          src="./public/assets/destination/image-moon.webp" 
           alt="Imagen del planeta">
              </div>
       </div>
-      <div class="box_right  flex flex-col justify-center  w-full xl:mt-28 xl:h-auto">
+      <div class="box_right  flex flex-col justify-center  w-full xl:mt-28 xl:h-auto md:w-[512px]">
         <div class="nav__destination flex w-[380px] mb-8 mt-6 self-center xl:mt-40">
           <ul class="flex flex-row align-middle justify-around w-full ">
-            <li class="destination relative after:absolute after:bottom-[-0.7rem] after:left-0 after:w-full after:h-[2px] after:bg-white after:scale-x-100 after:transition-transform after:duration-300 hover:after:scale-x-100 text-white uppercase font-thin">Moon</li>
-            <li class="destination relative after:absolute after:bottom-[-0.7rem] after:left-0 after:w-full after:h-[2px] after:bg-white after:scale-x-0 after:transition-transform after:duration-300 hover:after:scale-x-100 text-white uppercase font-thin">Mars</li>
-            <li class="destination relative after:absolute after:bottom-[-0.7rem] after:left-0 after:w-full after:h-[2px] after:bg-white after:scale-x-0 after:transition-transform after:duration-300 hover:after:scale-x-100 text-white uppercase font-thin">Europa</li>
-            <li class="destination relative after:absolute after:bottom-[-0.7rem] after:left-0 after:w-full after:h-[2px] after:bg-white after:scale-x-0 after:transition-transform after:duration-300 hover:after:scale-x-100 text-white uppercase font-thin">Titan</li>
+            <li class="destination relative cursor-pointer after:absolute after:bottom-[-0.7rem] after:left-0 after:w-full after:h-[2px] after:bg-white after:scale-x-100 after:transition-transform after:duration-300 hover:after:scale-x-100 text-white uppercase font-thin">Moon</li>
+            <li class="destination relative cursor-pointer after:absolute after:bottom-[-0.7rem] after:left-0 after:w-full after:h-[2px] after:bg-white after:scale-x-0 after:transition-transform after:duration-300 hover:after:scale-x-100 text-white uppercase font-thin">Mars</li>
+            <li class="destination relative cursor-pointer after:absolute after:bottom-[-0.7rem] after:left-0 after:w-full after:h-[2px] after:bg-white after:scale-x-0 after:transition-transform after:duration-300 hover:after:scale-x-100 text-white uppercase font-thin">Europa</li>
+            <li class="destination relative cursor-pointer after:absolute after:bottom-[-0.7rem] after:left-0 after:w-full after:h-[2px] after:bg-white after:scale-x-0 after:transition-transform after:duration-300 hover:after:scale-x-100 text-white uppercase font-thin">Titan</li>
           </ul>
         </div>
         <div class="box__info transition-all  ease-in-out  opacity-100  translate-y-0 ">

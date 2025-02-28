@@ -28,19 +28,19 @@ const burguerMenu = document.querySelector("#hamburger__menu");
 const closeMenu = document.querySelector("#close__menu");
 const layoutNav = document.querySelector(".layout__nav");
 
-burguerMenu.addEventListener("click", () => {
-    layoutNav.classList.remove("w-[0%]");
-    layoutNav.classList.add("w-[60%]");
+burguerMenu.addEventListener("click", ()=>{
+    layoutNav.classList.remove("w-[0%]", "translate-x-52");
+    layoutNav.classList.add("w-[60%]","translate-x-0");
     burguerMenu.classList.add("hidden");
     closeMenu.classList.remove("hidden");
-});
 
-closeMenu.addEventListener("click", () => {
-    layoutNav.classList.remove("w-[60%]");
-    layoutNav.classList.add("w-[0%]");
-    
+});
+closeMenu.addEventListener("click", ()=>{
+    layoutNav.classList.add("w-[0%]", "translate-x-52");
+    layoutNav.classList.remove("w-[60%]","translate-x-0");
     closeMenu.classList.add("hidden");
     burguerMenu.classList.remove("hidden");
+
 });
 
 const procesarDatos = (data) => {
@@ -97,17 +97,14 @@ const manejarDestinos = (destinations) => {
                 planetImg.alt = `Imagen de ${destinations[index].name}`;
                 console.log(`Ruta de la imagen: ./assets/destination/${destinations[index].images.webp}`);
 
-                // Esperar a que la imagen se cargue antes de aplicar animación
-                loadImage(planetImg).then(() => {
-                    destImg.classList.remove("opacity-0");
-                    boxInfo.classList.remove("opacity-0");
-                    boxDetails.classList.remove("opacity-0");
+                // Añadir las clases de animación para la entrada
+                destImg.classList.remove("opacity-0");
+                boxInfo.classList.remove("opacity-0");
+                boxDetails.classList.remove("opacity-0");
 
-                    destImg.classList.add("animated");
-                    boxInfo.classList.add("animated");
-                    boxDetails.classList.add("animated");
-                });
-
+                destImg.classList.add("animated");
+                boxInfo.classList.add("animated");
+                boxDetails.classList.add("animated");
             }, 300); // Tiempo para esperar a que termine la animación de salida
 
             // Resaltar el destino seleccionado
@@ -122,71 +119,57 @@ const manejarDestinos = (destinations) => {
     });
 };
 
-// Esperar que la imagen se cargue antes de continuar
-const loadImage = (imgElement) => {
-    return new Promise((resolve, reject) => {
-        if (imgElement.complete) {
-            resolve();
-        } else {
-            imgElement.onload = resolve;
-            imgElement.onerror = reject;
-        }
-    });
-};
+
+
+
 
 // Función para manejar los clics en los puntos de tripulación
-// Datos de la tripulación (puedes agregar más miembros de la tripulación aquí)
-
-  
-  // Seleccionar los puntos de la tripulación
-  const crewDots = document.querySelectorAll(".crew__dot");
-  
-  // Función para actualizar la información de la tripulación y la imagen
-  const changeCrew = (crew) => {
+const changeCrew = (crew) => {
     const crewDots = document.querySelectorAll(".crew__dot");
     const crewSection = document.querySelector(".crew__secton");
     const crewName = document.querySelector(".name__person");
     const crewBio = document.querySelector(".crew__text");
-    const crewImageContainer = document.querySelector(".crew__img");
+    const crewImage = document.querySelector(".crew__img");
     const crewRole = document.querySelector(".crew__role");
+
 
     if (crewDots.length === 0) {
         console.error("No se encontraron puntos de tripulación");
         return;
     }
 
+    // De forma predeterminada, la sección de tripulación ya tiene la clase "animated" y es visible
+    crewSection.classList.remove("opacity-0");
+    crewSection.classList.add("animated");
+
     crewDots.forEach((dot, index) => {
         dot.addEventListener("click", () => {
-            
-            crewName.innerHTML = crew[index].name;
-            crewRole.innerHTML = crew[index].role;
-            crewBio.innerHTML = crew[index].bio;
+            console.log("Tripulación seleccionada:", crew[index].name);
 
-            // Cambiar la imagen de fondo dinámicamente
-            const newImage = crew[index].images ? crew[index].images.webp : '';  // Tomamos la URL de la imagen desde el JSON, y aseguramos que no esté indefinida
+            // Eliminar la animación previa y añadir fade-out
+            crewSection.classList.remove("animated");
+            crewSection.classList.add("opacity-0");
 
-            if (newImage) {
-                // Eliminamos cualquier imagen de fondo previamente definida
-                crewImageContainer.style.backgroundImage = ''; // Limpiamos el fondo existente
+            // Esperar 300ms (duración de la animación de salida) antes de cambiar la información
+            setTimeout(() => {
+                // Cambiar los datos de la tripulación
+                crewName.innerHTML = crew[index].name;
+                crewRole.innerHTML = crew[index].role;
+                crewBio.innerHTML = crew[index].bio;
+                crewImage.src = `${crew[index].images.webp}`;
+                crewImage.alt = `Imagen de ${crew[index].name}`;
 
-                // Aplicamos la nueva imagen de fondo
-                crewImageContainer.style.backgroundImage = `url(${newImage})`;  
-                crewImageContainer.style.backgroundSize = 'contain';  // Aseguramos que la imagen no se recorte
-                crewImageContainer.style.backgroundPosition = 'center';  // Centrar la imagen
+                // Añadir las clases de animación para la entrada
+                crewSection.classList.remove("opacity-0");
+                crewSection.classList.add("animated");
+            }, 300); // Tiempo para esperar a que termine la animación de salida
 
-                // Esperamos que la imagen de fondo se haya cargado correctamente
-                
-            } else {
-                console.error("La imagen no está definida para este miembro de la tripulación.");
-            }
-
-            // Resaltamos el punto de tripulación seleccionado
+            // Resaltar el punto de tripulación seleccionado
             crewDots.forEach((item) => {
                 item.classList.remove("bg-white");
                 item.classList.add("bg-white/50");
-            
             });
-            
+
             dot.classList.remove("bg-white/50");
             dot.classList.add("bg-white");
         });
@@ -194,12 +177,9 @@ const loadImage = (imgElement) => {
 };
 
 
-  
-  
 
 
 
-// Función para manejar los clics en los puntos de tecnología
 const changeTech = (technology) => {
     const techNames = document.querySelectorAll(".box_tech__number");
     const techTitle = document.querySelector(".tech__title");
@@ -214,31 +194,29 @@ const changeTech = (technology) => {
         tech.addEventListener("click", () => {
             console.log("Tecnología seleccionada:", technology[index].name);
 
-            // Eliminar animaciones previas y añadir opacidad 0 (fade-out)
+            // 1. Eliminar animaciones previas y añadir opacidad 0 (fade-out)
             techRigth.classList.remove("animated");
             boxTechImg.classList.remove("animated");
             techRigth.classList.add("opacity-0");
             boxTechImg.classList.add("opacity-0");
 
-            // Esperar 300ms antes de cambiar los datos
+            // 2. Esperar el tiempo necesario para que la animación de salida ocurra
             setTimeout(() => {
-                // Actualizamos el contenido
+                // 3. Actualizamos el contenido
                 techTitle.innerHTML = technology[index].name;
                 techText.innerHTML = technology[index].description;
                 techLandscapeSource.srcset = `${technology[index].images.landscape}`;
                 techPortraitSource.srcset = `${technology[index].images.portrait}`;
                 techMediaDefault.src = `${technology[index].images.landscape}`;
 
-                // Esperar a que la imagen se cargue antes de aplicar animación
-                loadImage(techMediaDefault).then(() => {
-                    techRigth.classList.remove("opacity-0");
-                    boxTechImg.classList.remove("opacity-0");
-                    techRigth.classList.add("animated");
-                    boxTechImg.classList.add("animated");
-                });
+                // 4. Añadir las animaciones de entrada (fade-in)
+                techRigth.classList.remove("opacity-0");
+                boxTechImg.classList.remove("opacity-0");
+                techRigth.classList.add("animated");
+                boxTechImg.classList.add("animated");
             }, 300); // 300ms para esperar que la animación de salida termine
 
-            // Resaltamos el botón seleccionado
+            // 5. Resaltamos el botón seleccionado
             techNames.forEach((tech) => {
                 tech.classList.remove("bg-white");
                 tech.classList.add("bg-transparent");
@@ -254,3 +232,5 @@ const changeTech = (technology) => {
         });
     });
 };
+
+
